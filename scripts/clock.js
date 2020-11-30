@@ -1,6 +1,6 @@
-var aTime = 10;
-var bTime = 10;
-var bonusTime = 2;
+var aTime = 600;
+var bTime = 600;
+var bonusTime = 5;
 var moves = [0, 0];
 
 var tickRate = 10; // ticks per second
