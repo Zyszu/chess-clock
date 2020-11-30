@@ -10,8 +10,12 @@
 </head>
 <body>
     <div class="wrapper">
-        <div id="gameStarter" onclick="gameStart()"></div>
-        <div id="pauseGame" onclick="gamePause()"></div>
+        <div id="gameStarter" onclick="gameStart()">
+            <div id="gameStarterInfo">Click somewhere to start the game</div>
+        </div>
+        <div id="pauseGame" onclick="gamePause()">
+            <div id="pauseGameInfo">Pause/Resume</div>
+        </div>
         <div id="top" onclick="switchTurnA()">
             <div class="timeLeft"></div>
             <div class="moves"></div>
