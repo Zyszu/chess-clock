@@ -14,8 +14,9 @@ var gameLast = false;
 var gamePaused = false;
 
 // cosmetics
-var avtiveFiledColor = 'rgb(29, 41, 144)';
-var notActiveFieldColor = 'rgb(90, 90, 90)';
+var divTop = document.querySelector('.top');
+var divBottom = document.querySelector('.bottom');
+var divPauseGame = document.querySelector('.pauseGame');
 
 function switchTurn(){
     if(gamePaused) return;
@@ -48,12 +49,10 @@ function updateMoves(){
 
 function updateATime(){
     document.getElementsByClassName('timeLeft')[0].innerHTML = aTime + 's';
-    
 }
 
 function updateBTime(){
     document.getElementsByClassName('timeLeft')[1].innerHTML = bTime + 's';
-    
 }
 
 function switchTurnA(){
@@ -61,8 +60,8 @@ function switchTurnA(){
     if(!aTurn) return;
     if(gamePaused) return;
     switchTurn();
-    document.getElementById('top').style.backgroundColor = notActiveFieldColor;
-    document.getElementById('bottom').style.backgroundColor = avtiveFiledColor;
+    divTop.classList.toggle('active');
+    divBottom.classList.toggle('active');
 }
 
 function switchTurnB(){
@@ -70,8 +69,8 @@ function switchTurnB(){
     if(aTurn) return;
     if(gamePaused) return;
     switchTurn();
-    document.getElementById('bottom').style.backgroundColor = notActiveFieldColor;
-    document.getElementById('top').style.backgroundColor = avtiveFiledColor;
+    divBottom.classList.toggle('active');
+    divTop.classList.toggle('active');
 }
 
 function gamePause(){
@@ -137,11 +136,9 @@ var timer = function(){
 function setUpActiveFieldColor(){
     if(aTurn)
     {
-        document.getElementById('bottom').style.backgroundColor = notActiveFieldColor;
-        document.getElementById('top').style.backgroundColor = avtiveFiledColor;
+        divTop.classList.toggle('active');
     }else{
-        document.getElementById('top').style.backgroundColor = notActiveFieldColor;
-        document.getElementById('bottom').style.backgroundColor = avtiveFiledColor;
+        divBottom.classList.toggle('active');
     }
 }
 
@@ -150,3 +147,17 @@ function updateSomeCss(){
     document.getElementsByClassName('moves')[1].style = 'position: absolute; color: white; font-size: 30px; right: 5%; bottom: 5%;';
     document.getElementsByClassName('moves')[0].style = 'position: absolute; color: white; left: 5%; font-size: 30px; transform: rotate(-180deg); top: 5%;';
 }
+
+// events
+divTop.addEventListener('click', function(){
+    switchTurnA();
+});
+
+divBottom.addEventListener('click', function(){
+    switchTurnB();
+});
+
+divPauseGame.addEventListener('click', function(){
+    gamePause();
+    divPauseGame.classList.toggle('active');
+});

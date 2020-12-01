@@ -4,7 +4,7 @@
     border-radius: 50%;
     height: 12vh;
     width: 12vh;
-    z-index: 1;
+    z-index: 10;
     top: 50%;
     transform: translate(-50%, -50%);
 }
@@ -15,19 +15,19 @@
 }
 
 .options{
-    position: fixed;
+    position: absolute;
     height: 100vh;
     width: 100%;
     background-color: rgb(17, 191, 69);
     color: white;
-    z-index: 2;
+    z-index: 10;
     clip-path: circle(1px at 0%);
     -webkit-clip-path: circle(1px at 0%);
-    transition: all 1s ease-out;
+    transition: all 0.4s ease-out;
 }
 
 .closeOptions{
-    position: fixed;
+    position: absolute;
     background-color: white;
     border-radius: 50%;
     height: 12vh;
@@ -36,7 +36,7 @@
     transform: translate(-50%, -50%);
     clip-path: circle(1vh at 0%);
     -webkit-clip-path: circle(1vh at 0%);
-    transition: all .6s ease-out;
+    transition: all .2s ease-out;
 }
 
 .closeOptions.show{

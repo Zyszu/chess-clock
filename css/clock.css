@@ -11,25 +11,33 @@ body{
     position: relative;
 }
 
-#top{
+.top{
     width: 100%;
     height: 50vh;
     background-color: rgb(90, 90, 90);
     position: relative;
 }
 
-#top:hover{
+.top.active{
+    background-color: rgb(29, 41, 144);
+}
+
+.top.active:hover{
     cursor: pointer;
 }
 
-#bottom{
+.bottom{
     width: 100%;
     height: 50vh;
     background-color: rgb(90, 90, 90);
     position: relative;
 }
 
-#bottom:hover{
+.bottom.active{
+    background-color: rgb(29, 41, 144);
+}
+
+.bottom.active:hover{
     cursor: pointer;
 }
 
@@ -48,7 +56,7 @@ body{
     height: 100vh;
     width: 100%;
     position: absolute;
-    z-index: 100;
+    z-index: 5;
 }
 
 #gameStarterInfo{
@@ -63,7 +71,7 @@ body{
     opacity: .75;
 }
 
-#pauseGame{
+.pauseGame{
     border: 8px solid white;
     background-color: rgb(32, 32, 32);
     height: 15vh;
@@ -73,10 +81,16 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: all .5s ease-out;
     z-index: 1;
 }
 
-#pauseGameInfo{
+.pauseGame.active{
+    background-color: rgb(90, 17, 17);
+    transition: all .5s ease-out;
+}
+
+.pauseGameInfo{
     position: absolute;
     color: white;
     font-size: 1.8vh;
@@ -85,6 +99,15 @@ body{
     transform: translate(-50%, -50%);
 }
 
-#pauseGame:hover{
+.pauseGame:hover{
     cursor: pointer;
+}
+
+.optionsText{
+    position: absolute;
+    color: white;
+    font-size: 15vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
