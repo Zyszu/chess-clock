@@ -21,6 +21,7 @@
         </div>
         <div class="openOptions"></div>
         <div class="options">
+            Yo
             <div class="closeOptions"></div>
             <div class="optionsText"></div>
         </div>
