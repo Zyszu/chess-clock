@@ -22,7 +22,7 @@
         <div class="openOptions"></div>
         <div class="options">
             <div class="closeOptions"></div>
-            <div class="optionsText">Hello! 🤩</div>
+            <div class="optionsText"></div>
         </div>
         <div class="top">
             <div class="timeLeft"></div>
