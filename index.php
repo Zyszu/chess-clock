@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/frontend.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <script src="scripts/clock.js" defer></script>
+    <script src="scripts/frontend.js" defer></script>
 </head>
 <body>
     <div class="wrapper">
@@ -31,7 +33,5 @@
             <div class="moves"></div>
         </div>
     </div>
-    <script src="scripts/clock.js"></script>
-    <script src="scripts/frontend.js"></script>
 </body>
 </html>
